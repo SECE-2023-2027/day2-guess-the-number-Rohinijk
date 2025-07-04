@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guess the Number</title>
+  <link rel="stylesheet" href="numguess.css"/>
+</head>
+<body>
+  <section class="header">
+    <h1>Guess the Number</h1>
+    <p>(Between 1 and 20)</p>
+    <button class="btn again">Again</button>
+    <div class="number">?</div>
+  </section>
+
+  <main class="main-content">
+    <section class="left-panel">
+      <input type="number" class="guess" placeholder="Enter number" />
+      <button class="btn check">Check</button>
+    </section>
+
+    <section class="right-panel">
+      <h2 class="message">Start guessing...</h2>
+      <p class="score"> Score: <span id="score">20</span></p>
+      <p class="highscore"> Highscore: <span id="highscore">0</span></p>
+    </section>
+  </main>
+
+  <script src="numguess.js"></script>
+</body>
+</html>

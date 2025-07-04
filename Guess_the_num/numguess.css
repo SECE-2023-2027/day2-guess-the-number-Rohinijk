@@ -1,0 +1,166 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color:white;
+  text-align: center;
+  padding: 30px 15px;
+  line-height: 1.6;
+}
+.header {
+  background: black;
+  padding: 30px 20px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color:white;
+}
+
+.header .btn.again {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  padding: 10px 20px;
+  background: green;
+  color:white;
+  border: none;
+  
+}
+
+.header .btn.again:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}
+.header .number {
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin: 40px auto 15px;
+  background:white;
+  color: black;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.header .number::before,
+.header .number::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  height: 2px;
+  background-color: #fff;
+  transform: translateY(-50%);
+}
+
+.header .number::before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.header .number::after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.left-panel input.guess {
+  width: 160px;
+  padding: 12px;
+  font-size: 1.2rem;
+  border: 2px solid #4caf50;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  text-align: center;
+}
+
+.left-panel .btn.check {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.left-panel .btn.check:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}
+.right-panel {
+  text-align: left;
+  max-width: 300px;
+}
+
+.message {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffeb3b;
+}
+
+.score,
+.highscore {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .right-panel {
+    text-align: center;
+    max-width: 100%;
+  }
+  .header .btn.again {
+    top: 20px;
+    right: 15px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  .header h1 {
+    font-size: 2.4rem;
+  }
+  .header .number {
+    width: 70px;
+    height: 70px;
+    font-size: 2.4rem;
+    line-height: 70px;
+  }
+}
